@@ -7,7 +7,8 @@ num_list = list(map(int, input().split()))
 
 if num_list == sorted(num_list):
     print("ascending")
-elif num_list == list(reversed(sorted(num_list))): # list를 reversed 함수에 사용할 경우 listreverseiterator가 반환되므로, list와 비교하기 위해 list 타입으로 다시 변환해줌
+# list를 reversed 함수에 사용할 경우 listreverseiterator가 반환되므로, list와 비교하기 위해 list 타입으로 다시 변환해줌
+elif num_list == list(reversed(sorted(num_list))): 
     print("descending")
 else:
     print("mixed")
