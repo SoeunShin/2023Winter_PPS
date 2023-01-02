@@ -3,8 +3,16 @@
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        for n in nums:
-            if nums.count(n) == 1:
-                return n
+        dic = {n:0 for n in nums}
 
-# 실행 시간이 너무 오래 걸린다... 다른 방법을 더 생각해볼 것!
+        for n in nums:
+            dic[n] += 1
+
+        for n in dic.items():
+            if n[1] == 1:
+                return n[0]
+
+# 아래 방법은 시간 복잡도가 큼
+#        for n in nums:
+#            if nums.count(n) == 1:
+#                return n
