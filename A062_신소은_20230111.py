@@ -8,4 +8,4 @@ def solution(a, b):
     num = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     
     all = sum(num[:a-1]) + b
-    return day[all%7]
+    return day[all%7] # 7로 나누어 떨어지는 날은 목요일이므로, day[0]을 목요일로 설정
