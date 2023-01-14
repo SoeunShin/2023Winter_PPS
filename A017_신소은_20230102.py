@@ -12,7 +12,7 @@ dic = {n:0 for n in range(10)}
 
 for n in num:
     if n == '6' or n == '9':
-        if dic[6] < dic[9]: # dic의 index로는 int type을 사용해야 에러가 나지 않는다. 왜지??
+        if dic[6] < dic[9]: # dic의 key로는 int type을 사용해야 에러가 나지 않는다. 왜지??
             dic[6] += 1
         else: dic[9] += 1
     else: dic[int(n)] += 1
