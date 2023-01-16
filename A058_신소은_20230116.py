@@ -25,9 +25,9 @@ class Solution:
         # head node를 curr라고 하고, None을 prev라고 설정 
         curr, prev = head, None
         while curr:
-            # next는 다음 node를 나타냄
-            # 다음 노드에 prev를 넣어줌 
+            # next는 다음에 옮길 node를 나타냄
+            # 다음 node에 prev를 넣어줌 
             next, curr.next = curr.next, prev
-            # prev에는 현재 node를, curr에는 next를 저장 
+            # 현재 옮긴 node를 prev로, 다음에 옮길 node를 curr라고 설정 
             prev, curr = curr, next
         return prev
